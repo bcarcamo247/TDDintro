@@ -12,8 +12,13 @@
  * sumDouble(5, 5); // 20
  */
 export function sumDouble(num1, num2) {
-  /* TODO */
+  if (num1 === num2) {
+    return (num1 + num2) * 2;
+  }  else {
+    return num1 + num2;
+  }
 }
+  /* TODO */
 
 /**
  * @param {number} num1 - First number.
@@ -28,8 +33,14 @@ export function sumDouble(num1, num2) {
  * makes10(4, 4); // false
  */
 export function makes10(num1, num2) {
-  /* TODO */
+  if (num1 === 10 || num2 === 10 || num1 + num2 === 10) {
+    return true;
+  }  else {
+    return false;
+  }
 }
+  /* TODO */
+
 
 /**
  * Hint: Math.abs(num) returns the absolute value of num.
@@ -46,8 +57,9 @@ export function makes10(num1, num2) {
  * near100(105, 10); // true
  */
 export function near100(n, distance) {
-  /* TODO */
+  return n >= 100 - distance && n <= 100 + distance;
 }
+    /* TODO */
 
 /**
  * Hint: use the remainder operator (%)
@@ -63,8 +75,10 @@ export function near100(n, distance) {
  * isMultiple35(7); // false
  */
 export function isMultiple35(n) {
-  /* TODO */
+  return n % 3 === 0 || n % 5 === 0;
 }
+    /* TODO */
+
 
 /**
  * Hint: use the remainder operator (%)
@@ -81,8 +95,9 @@ export function isMultiple35(n) {
  * shareLastDigit(10, 21); // false
  */
 export function shareLastDigit(num1, num2) {
-  /* TODO */
-}
+  return num1 % 10 === num2 % 10;
+}  
+/* TODO */
 
 /**
  * @param {number} temp1 - First temperature.
@@ -98,8 +113,9 @@ export function shareLastDigit(num1, num2) {
  * isColdAndHot(10, 50); // false
  */
 export function isColdAndHot(temp1, temp2) {
-  /* TODO */
-}
+  return (temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100);
+}  
+/* TODO */
 
 /**
  * @param {string} A - First string.
@@ -114,6 +130,7 @@ export function isColdAndHot(temp1, temp2) {
  * makeABBA("a", "b"); // "abba"
  */
 export function makeABBA(A, B) {
+  return A + B + B + A;
   /* TODO */
 }
 
@@ -135,9 +152,14 @@ export function makeABBA(A, B) {
  * makeSLS("a", "abc"); // "aabca"
  */
 export function makeSLS(str1, str2) {
+   if (str1.length < str2.length) {
+    return str1 + str2 + str1;
+  }  else {
+    return str2 + str1 + str2;
+  }
   /* TODO */
-}
 
+}
 /**
  * You and your date are trying to get into an exclusive club.
  * If either of you is very stylish (8 or more), the result is 2 (yes).
@@ -156,8 +178,17 @@ export function makeSLS(str1, str2) {
  * canEnterClub(5, 5); // 1
  */
 export function canEnterClub(you, date) {
-  /* TODO */
+  if (you <= 2 || date <= 2) {
+    return 0;
+  }  else if (you >= 8 || date >= 8) {
+    return 2;
+  }  else {
+    return 1;
+  }  
+    
 }
+  /* TODO */
+
 
 /**
  * Your phone rings. Normally you answer, except:
@@ -177,5 +208,14 @@ export function canEnterClub(you, date) {
  * shouldAnswerPhone(true, true, false); // true
  */
 export function shouldAnswerPhone(isMorning, isBoss, isAsleep) {
-  /* TODO */
+  if (isAsleep) {
+    return false;
+  } else if (isMorning && !isBoss) {
+    return false;
+  }  else {
+    return true;
+  }
 }
+  
+  /* TODO */
+

@@ -13,7 +13,7 @@ import {
   shouldAnswerPhone,
 } from "./index.js";
 
-describe("sumDouble", function () {
+describe.only("sumDouble", function () {
   it("adds two different positive numbers", function () {
     expect(sumDouble(1, 2)).toBe(3);
   });
@@ -39,7 +39,7 @@ describe("sumDouble", function () {
   });
 });
 
-describe("makes10", function () {
+describe.only("makes10", function () {
   it("is true when first number is 10", function () {
     expect(makes10(10, 0)).toBe(true);
   });
@@ -64,7 +64,7 @@ describe("makes10", function () {
   });
 });
 
-describe("near100", function () {
+describe.only("near100", function () {
   it("is true well inside distance", function () {
     expect(near100(95, 10)).toBe(true);
     expect(near100(105, 10)).toBe(true);
@@ -92,7 +92,7 @@ describe("near100", function () {
   });
 });
 
-describe("isMultiple35", function () {
+describe.only("isMultiple35", function () {
   it("is true for a multiple of 3 only", function () {
     expect(isMultiple35(3)).toBe(true);
     expect(isMultiple35(9)).toBe(true);
@@ -124,7 +124,7 @@ describe("isMultiple35", function () {
   });
 });
 
-describe("shareLastDigit", function () {
+describe.only("shareLastDigit", function () {
   it("is true when both are one-digit and equal", function () {
     expect(shareLastDigit(7, 7)).toBe(true);
   });
@@ -145,7 +145,7 @@ describe("shareLastDigit", function () {
   });
 });
 
-describe("isColdAndHot", function () {
+describe.only("isColdAndHot", function () {
   it("is true when first is cold and second is hot", function () {
     expect(isColdAndHot(-5, 120)).toBe(true);
   });
@@ -175,7 +175,7 @@ describe("isColdAndHot", function () {
   });
 });
 
-describe("makeABBA", function () {
+describe.only("makeABBA", function () {
   it("builds ABBA from two normal words", function () {
     expect(makeABBA("Hi", "Bye")).toBe("HiByeByeHi");
     expect(makeABBA("Yo", "Alice")).toBe("YoAliceAliceYo");
@@ -203,7 +203,7 @@ describe("makeABBA", function () {
   });
 });
 
-describe("makeSLS", function () {
+describe.only("makeSLS", function () {
   it("puts shorter first string outside when first is shorter", function () {
     expect(makeSLS("Hi", "Hello")).toBe("HiHelloHi");
     expect(makeSLS("a", "abc")).toBe("aabca");
@@ -228,7 +228,7 @@ describe("makeSLS", function () {
   });
 });
 
-describe("canEnterClub", function () {
+describe.only("canEnterClub", function () {
   it("returns 2 when you are very stylish", function () {
     expect(canEnterClub(9, 5)).toBe(2);
   });
@@ -260,7 +260,7 @@ describe("canEnterClub", function () {
   });
 });
 
-describe("shouldAnswerPhone", function () {
+describe.only("shouldAnswerPhone", function () {
   it("answers when not morning and not asleep, any caller", function () {
     expect(shouldAnswerPhone(false, false, false)).toBe(true);
     expect(shouldAnswerPhone(false, true, false)).toBe(true);
